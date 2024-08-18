@@ -11,23 +11,26 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    height: 200vh;
+    font-family: poppins;
+    height: 200vh; /* Apenas para fins de rolagem */
 }
 
 header {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.1); /* Translucidez do fundo */
     color: #fff;
-    position: relative;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 64px;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    position: fixed;
-    height: 64px;
-    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 -6px 10px 5px black;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
 }
+
 
 .container {
     display: flex;
@@ -106,3 +109,152 @@ header {
 .nav.open {
     right: 0;
 }
+
+/* -------------- MAIN --------------- */
+
+.welcome {
+background: linear-gradient(180deg,#f0d9ff,#faf2ff);
+}
+
+.main-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1009px;
+    padding: 20.68px 15px 40.68px;
+    margin: 0 auto;
+}
+
+.welcome-ctn {
+    display: flex;
+    flex-direction: column;
+    max-width: 497px;
+    row-gap: 10px;
+    margin-top: 45px;
+    margin-top: 25px;
+}
+
+.pr-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.pr-list li {
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+.header-ctn-title{
+    font-size: 40px;
+    line-height: 60px;
+    color: #3C3C3C;
+    font-weight: 400;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.header-ctn-subtitle {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+span {
+    font-weight: 700;
+}
+
+.btn {
+    margin-top: 15px;
+    background-image: linear-gradient(90deg, #ff005c, #0af);
+    outline: none;
+    padding: 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 32px;
+    font-family: poppins;
+    width: 60%;
+    cursor: pointer;
+    color: #fff;
+    
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.benefits .card {
+    width: 300px;
+    height: 350px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.benefits .card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover; /* Para cortar a imagem e mantê-la centralizada */
+}
+.benefits-title {
+    text-align: center;
+}
+
+.tst img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.plans {
+    margin-top: 70px;
+    display: flex;
+    background: linear-gradient(180deg,#f0d9ff,#faf2ff);
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.levels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: pink;
+}
+
+.levels p {
+    text-align: center;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.bloco p {
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
