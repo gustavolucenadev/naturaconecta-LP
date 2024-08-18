@@ -1,87 +1,108 @@
+:root {
+    --softGray: #eef0fe;
+    --darkGray: #767877;
+    --pink: #e30f43;
+    --pinkOrange: #e52638;
+    --darkOrange: #e73a2f;
+    --orange: #e84c26;
+    --softOrange: #e95d1f;
+    --naturaGradient: linear-gradient(to right, #eb661b, #e30f43);
+}
+
 body {
-    margin: 0 auto;
-    box-sizing: border-box;
-    background: radial-gradient(circle at 0.8% 1.8%, rgb(255, 104, 107) 50%, rgb(255, 187, 103) 90.1%);
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    max-width: 1500px;
-    padding: 15px;
-    height: 100vh;
-
-
-}
-
-.header {
-    height: 100px;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
-#title {
-    flex-direction: column;
-    line-height: 10px;
-}
-
-h1 {
-    font-weight: 200;
-}
-
-li {
-    display: inline-block;
-    margin: 20px;
-}
-
-a {
-    color: white;
-}
-
-a:hover {
-    border: 1px solid #fff;
-    border-radius: 8px;
-    padding: 6px;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.main {
-    height: 600px;
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    color: #fff;
-}
-
-.section-left {
-    padding: 20px 0;
-}
-
-.section-left h1 {
-    font-size: 40px;
-    font-weight: bold;
     margin: 0;
+    font-family: Arial, sans-serif;
+    height: 200vh;
 }
 
-.section-left .you {
-    border: 3px solid orange;
-    border-radius: 8px;
-    display: inline-block;
-    padding: 10px;
+header {
+    background: #fff;
+    color: #fff;
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    height: 64px;
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
 }
 
-.section-left p {
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.8);
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.pickup {
-    border-bottom: 2px solid orange;
+.logo {
+    max-height: 30px; /* Diminuído em 20px */
 }
 
+.menu-toggle {
+    position: absolute;
+    right: 210px; /* Ajuste conforme necessário */
+    cursor: pointer;
+    z-index: 1000; /* Garante que o menu toggle esteja acima da sidebar */
+}
 
+.menu-toggle .bar {
+    display: block;
+    width: 30px; /* Ajuste conforme necessário */
+    height: 3px; /* Ajuste conforme necessário */
+    background: #000; /* Cor das barras */
+    margin: 6px 0; /* Espaçamento entre as barras */
+    transition: 0.3s;
+}
 
+/* Estilo da sidebar */
+.nav {
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Sidebar escondida à direita */
+    width: 250px; /* Largura da sidebar */
+    height: 100%;
+    background: #fff; /* Cor de fundo da sidebar */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para destacar a sidebar */
+    transition: right 0.3s;
+    z-index: 999; /* Garante que a sidebar esteja acima do conteúdo */
+}
 
+.nav ul {
+    list-style: none;
+    padding: 20px;
+}
 
+.nav ul li {
+    margin: 50px 0;
+    border-bottom: 1px solid gray;
+    display: block;
+    width: 100px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #000; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Estilo do menu hambúrguer aberto */
+.menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 8.5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Sidebar visível */
+.nav.open {
+    right: 0;
+}
