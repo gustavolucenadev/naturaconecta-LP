@@ -18,8 +18,6 @@ body {
 header {
     background: rgba(255, 255, 255, 0.1); /* Translucidez do fundo */
     color: #fff;
-    position: sticky;
-    top: 0;
     width: 100%;
     height: 64px;
     padding: 10px 20px;
@@ -123,6 +121,22 @@ background: linear-gradient(180deg,#f0d9ff,#faf2ff);
     max-width: 1009px;
     padding: 20.68px 15px 40.68px;
     margin: 0 auto;
+    height: 330px;
+}
+
+.main-img img {
+    object-fit: cover;
+    background: transparent !important;
+    transform: rotate(10deg);
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 335px
+}
+
+.main-img {
+    align-items: center;
+    padding-top: 10px;
 }
 
 .welcome-ctn {
@@ -182,6 +196,7 @@ span {
 .benefits {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     
 }
 
@@ -211,13 +226,14 @@ span {
     object-fit: cover;
 }
 
-.plans {
+/* .plans {
     margin-top: 70px;
     display: flex;
     background: linear-gradient(180deg,#f0d9ff,#faf2ff);
     flex-direction: row;
     gap: 20px;
     justify-content: center;
+    padding: 20px 0;
 }
 
 .levels {
@@ -226,7 +242,8 @@ span {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background-color: pink;
+    background-color: #ffebf3;
+    border-radius: 8px;
 }
 
 .levels p {
@@ -238,11 +255,145 @@ span {
     flex-direction: column;
     background-color: #fff;
     padding: 10px;
+    border-radius: 8px;
 }
 
 .bloco p {
     font-size: 10px;
+} */
+
+strong {
+    color: #3C3C3C;
 }
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Faz o botão ser redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none; /* Esconde o botão inicialmente */
+    z-index: 1000;
+    font-size: 20px; /* Tamanho do ícone */
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
+.fa-chevron-up {
+    margin: 0; /* Remove a margem do ícone */
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 1209px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.card-slide {
+    background: linear-gradient(180deg, #f0d9ff, #faf2ff);
+    padding: 10px;
+    border-radius: 8px;
+    flex: 0 0 auto;
+}
+
+.card-slide img {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.prev-btn, .next-btn {
+    background: transparent;
+    color: #000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.prev-btn {
+    margin-right: 10px;
+}
+
+.next-btn {
+    margin-left: 10px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.indicator-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator-dot.active {
+    background-color: #000;
+}
+
+.prev-btn:disabled, .next-btn:disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

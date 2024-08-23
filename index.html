@@ -12,6 +12,12 @@
     <script src="script.js"></script>   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="smooth.js"></script>
+<script src="carousel.js"></script>
 </head>
 <body>
     <header>
@@ -26,20 +32,20 @@
         
         <nav class="nav" id="nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#welcome">Home</a></li>
+                <li><a href="#our-app">App</a></li>
+                <li><a href="#about-us">Sobre Nós</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="welcome">
+    <section class="welcome" id="welcome">
         <div class="main-ctn">
             <div class="welcome-ctn">
                 <div class="header-ctn">
                     <h1 class="header-ctn-title">Boas vindas ao <span>Conecta</span></h1>
-                    <h2 class="header-ctn-subtitle">O app que revolucionará o seu jeito de ser uma consultora Natura</h2>
+                    <h2 class="header-ctn-subtitle">O app que revolucionará o seu jeito de ser uma consultora <strong>Natura</strong></h2>
                 </div>
 
                 <div class="paragraph ctn">
@@ -53,21 +59,21 @@
                 </div>
             </div>
 
-            
+            <div class="main-img">
+                <img src="/assets/samsung_preview_rev_1.png" alt="">
+            </div>
         </div>
-
-        
     </section>
 
     <h2 class="benefits-title">
-        Nosso aplicativo
+        Pick up points
     </h2>
 
 
     <section class="benefits">
 
         <div class="card">
-            <img src="/assets/natura-models.png" alt="">
+            <img src="/assets/map.jpg" alt="">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, nostrum.</p>
         </div>
 
@@ -92,78 +98,30 @@
         </div>
     </section>
 
-    <section class="plans">
-        <div class="levels">
-            <p>Plano Embaixador</p>
-            <div class="bloco">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos.</p>
+    <section class="our-app" id="our-app">
+        <h2 class="benefits-title">Nosso App</h2>
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="bg">
+                    <div class="card-slide"><img src="/assets/print1.jpg" alt=""></div>
+                    <div class="card-slide"><img src="/assets/print2.jpg" alt=""></div>
+                    <div class="card-slide"><img src="/assets/print3.jpg" alt=""></div>
+                    <div class="card-slide"><img src="/assets/print4.jpg" alt=""></div>
+                    <div class="card-slide"><img src="/assets/print5.jpg" alt=""></div>
+                </div>
             </div>
-
-            <div class="bloco">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos.</p>
-            </div>
-
-            <div class="bloco">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos.</p>
-            </div>
-
-            <div class="bloco">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos.</p>
-            </div>
-
-            <div class="bloco">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos.</p>
+            <div class="controls">
+                <button class="prev-btn" aria-label="Previous Slide" disabled>&#10094;</button>
+                <div class="indicators"></div>
+                <button class="next-btn" aria-label="Next Slide">&#10095;</button>
             </div>
         </div>
-
-        <div class="levels">
-            <p>Plano Classico</p>
-            <div class="bloco">
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-
-            <div class="bloco">
-                <p>Lorem ipsum dolor sit ame</p>
-            </div>
-
-            <div class="bloco">
-                <p>Lorem ipsum dolor sit ame</p>
-            </div>
-
-            <div class="bloco">
-                <p>Lorem ipsum dolor sit ame</p>
-            </div>
-
-            <div class="bloco">
-                <p>Lorem ipsum dolor sit ames.</p>
-            </div>
-        </div>
-
-            <div class="levels">
-                <p>Plano Executivo</p>
-                <div class="bloco">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos.</p>
-                </div>
-    
-                <div class="bloco">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos.</p>
-                </div>
-    
-                <div class="bloco">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos.</p>
-                </div>
-    
-                <div class="bloco">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos.</p>
-                </div>
-    
-                <div class="bloco">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos.</p>
-                </div>
     </section>
 
-    <section class="team">
-        <h2>Nosso time</h2>
-    </section>
+    <button id="back-to-top" class="back-to-top">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </button>
+   
+
 </body>
 </html>
