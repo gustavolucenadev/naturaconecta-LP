@@ -77,3 +77,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateCarousel(); // Inicializa a posição do carrossel
 });
+
+

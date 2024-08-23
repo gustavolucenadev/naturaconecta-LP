@@ -9,11 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) { // Ajuste o valor conforme necessário
-        header.classList.add('shrink');
-    } else {
-        header.classList.remove('shrink');
-    }
-});
+
