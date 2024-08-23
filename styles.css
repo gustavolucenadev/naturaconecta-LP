@@ -12,20 +12,20 @@
 body {
     margin: 0;
     font-family: poppins;
-    height: 200vh; /* Apenas para fins de rolagem */
+    height: 200vh;
 }
 
 header {
-    background: rgba(255, 255, 255, 0.1); /* Translucidez do fundo */
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
-    position: relative; /* Alterado de sticky para relative */
+    position: relative;
     width: 100%;
     height: 64px;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 -6px 10px 5px black; /* Sombras aplicadas */
+    box-shadow: 0 -6px 10px 5px black;
     transition: all 0.3s ease;
     box-sizing: border-box;
 }
@@ -39,37 +39,37 @@ header {
 }
 
 .logo {
-    max-height: 30px; /* Diminuído em 20px */
+    max-height: 30px;
 }
 
 .menu-toggle {
     position: absolute;
-    right: 210px; /* Ajuste conforme necessário */
+    right: 210px;
     cursor: pointer;
-    z-index: 1000; /* Garante que o menu toggle esteja acima da sidebar */
+    z-index: 1000;
 }
 
 .menu-toggle .bar {
     display: block;
-    width: 30px; /* Ajuste conforme necessário */
-    height: 3px; /* Ajuste conforme necessário */
-    background: #000; /* Cor das barras */
-    margin: 6px 0; /* Espaçamento entre as barras */
+    width: 30px;
+    height: 3px;
+    background: #000;
+    margin: 6px 0;
     transition: 0.3s;
 }
 
-/* Estilo da sidebar */
+
 .nav {
     padding-top: 20px;
     position: fixed;
     top: 0;
-    right: -250px; /* Sidebar escondida à direita */
-    width: 250px; /* Largura da sidebar */
+    right: -250px;
+    width: 250px;
     height: 100%;
-    background: #fff; /* Cor de fundo da sidebar */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para destacar a sidebar */
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     transition: right 0.3s;
-    z-index: 999; /* Garante que a sidebar esteja acima do conteúdo */
+    z-index: 999;
 }
 
 .nav ul {
@@ -148,6 +148,11 @@ background: linear-gradient(180deg,#f0d9ff,#faf2ff);
     margin-top: 25px;
 }
 
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  }
+
 .pr-list {
     margin: 0;
     padding-left: 20px;
@@ -165,7 +170,10 @@ background: linear-gradient(180deg,#f0d9ff,#faf2ff);
     font-weight: 400;
     margin-bottom: 10px;
     padding: 0;
+    
 }
+
+
 
 .header-ctn-subtitle {
     margin: 0;
@@ -401,7 +409,7 @@ html {
     width: 600px;
     height: 400px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 16px;
 }
 
 .grid-right {
@@ -420,29 +428,106 @@ html {
 
 .accordion-content {
     display: none;
-    padding-left: 36px;
-    padding-bottom: 10px;
     width: 300px;
     font-size: 12px;
     opacity: 0.7;
-}
+    transition: all 5s ease-in;}
 
 .arrow {
     position: absolute;
+    top: 20px;
     right: -50px;
-    top: 50%;
-    transform: translateY(-50%);
     font-size: 14px;
-    transition: transform 1s ease;
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in;
 }
 
 .pr.active .arrow i {
     transform: rotate(180deg);
+    transition: all 0.3s ease-in;
 }
 
-.pr-p i {
-    padding-right: 18px; /* Ajuste o valor conforme necessário */
+#typewriter {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid black; /* Imita o cursor piscando */
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  }
+
+  .form-section {
+    background-color: #faf2ff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
+
+.form-group {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="submit"] {
+    background-image: linear-gradient(90deg, #ff005c, #0af);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #333;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border-top: 1px solid #e0e0e0;
+    position: relative;
+    bottom: 0;
+    height: 80px;
+}
+
+.footer .symbol {
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+
+
+
+
 
 
 
