@@ -751,11 +751,11 @@ html {
     }
 
     .prev-btn, .next-btn {
-        display: none;
+        display: none !important;
     }
 
     .back-to-top {
-       display: none;
+       display: none !important;
     }
 }
 
