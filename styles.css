@@ -168,7 +168,7 @@ li::marker {
     }
 
     .nav {
-        width: 100px;
+        width: 200px;
     }
 
     .nav ul li {
@@ -452,6 +452,10 @@ strong {
         z-index: 1000;
         font-size: 20px; /* Tamanho do ícone */
     }
+
+    .fa-chevron-up {
+        margin: 0; /* Remove a margem do ícone */
+    }
     
 }
 
@@ -708,6 +712,8 @@ html {
         
     }
 
+
+
     .grid {
         max-width: 300px;
         font-size: 12px;
@@ -773,10 +779,15 @@ html {
         overflow: hidden;
     }
 
-
-
-
-    
+    .prev-btn, .next-btn {
+        background: transparent;
+        color: #3c3c3c;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 34px;
+        z-index: 10;
+    }
 }
 
 
