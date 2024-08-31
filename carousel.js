@@ -45,6 +45,25 @@ document.addEventListener('DOMContentLoaded', function () {
         nextButton.disabled = (index === slideCount - 1);
     }
 
+    function autoPlay() {
+        if (window.innerWidth < 768) { // Verifica a largura da tela
+            setInterval(() => {
+                if (index === slideCount - 1) {
+                    index = 0; // Volta para o primeiro slide
+                    slides.style.transition = 'none'; // Remove a transição
+                    updateCarousel();
+                    setTimeout(() => {
+                        slides.style.transition = 'transform 0.5s ease'; // Reaplica a transição
+                        updateCarousel();
+                    }, 0);
+                } else {
+                    index++;
+                    updateCarousel();
+                }
+            }, 1000); // Tempo de rotação automática (3 segundos)
+        }
+    }
+
     prevButton.addEventListener('click', function () {
         if (index === 0) {
             index = slideCount - 1; // Volta para o último slide
@@ -76,6 +95,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     updateCarousel(); // Inicializa a posição do carrossel
+    autoPlay(); // Inicia a rotação automática se necessário
 });
-
-
