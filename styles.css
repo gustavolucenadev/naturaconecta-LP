@@ -435,12 +435,24 @@ strong {
 
 @media (max-width: 768px) {
     .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--orange);
+        color: #fff;
+        border: none;
         width: 40px;
         height: 40px;
-        bottom: 15px;
-        right: 15px;
-        font-size: 16px; /* Reduz o tamanho do ícone */
+        border-radius: 50%; /* Faz o botão ser redondo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        display: none; /* Esconde o botão inicialmente */
+        z-index: 1000;
+        font-size: 20px; /* Tamanho do ícone */
     }
+    
 }
 
 .carousel-container {
@@ -690,8 +702,10 @@ html {
 }
 
 @media (max-width: 768px) {
-    .our-app {
-        display: none;
+    .our-app img{ 
+        width: 200px;
+        height: 400px;
+        
     }
 
     .grid {
@@ -716,6 +730,7 @@ html {
     .footer {
         justify-content: center;
         display: block;
+        font-size: 15px;
     }
 
     .card p {
@@ -737,6 +752,25 @@ html {
 
     .benefits-title {
         font-size: 18px;
+    }
+
+    .form-group label {
+        display: inline-block;
+        margin-bottom: 5px;
+        color: #333;
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        max-width: 709px;
+        margin: 0 auto;
+        overflow: hidden;
     }
 
 
