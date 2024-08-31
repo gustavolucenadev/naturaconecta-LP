@@ -771,11 +771,6 @@ html {
         z-index: 1000;
         font-size: 24px; /* Tamanho do ícone */
     }
-    
-    
-    .fa-chevron-up {
-        margin: 0 auto; /* Remove a margem do ícone */
-    }
 }
 
 
