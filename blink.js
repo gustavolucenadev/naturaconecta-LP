@@ -12,7 +12,7 @@ function typeWriter() {
     // Ajusta o texto conforme o tamanho da tela
     if (window.innerWidth < 768) {
         text = shortText;
-        speed = 200
+        speed = 300
     } else {
         text = fullText;
     }
