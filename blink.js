@@ -1,11 +1,21 @@
-const text = "Boas vindas ao Conecta";
+const fullText = "Boas vindas ao Conecta";
+const shortText = "Conecta";
+let text = fullText;
 let index = 0;
 let isDeleting = false;
-const speed = 100; // Velocidade da digitação
+let speed = 100; // Velocidade da digitação
 const pause = 100; // Pausa antes de apagar/recomeçar
 
 function typeWriter() {
     const display = document.getElementById("typewriter");
+
+    // Ajusta o texto conforme o tamanho da tela
+    if (window.innerWidth < 768) {
+        text = shortText;
+        speed = 200
+    } else {
+        text = fullText;
+    }
 
     if (!isDeleting && index <= text.length) {
         display.innerHTML = text.slice(0, index);
@@ -25,3 +35,5 @@ function typeWriter() {
 }
 
 window.onload = typeWriter;
+window.onresize = typeWriter; // Adiciona o ajuste ao redimensionar a janela
+

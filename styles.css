@@ -9,10 +9,17 @@
     --naturaGradient: linear-gradient(to right, #eb661b, #e30f43);
 }
 
+html {
+    width: 100%;
+}
+
 body {
     margin: 0;
     font-family: poppins;
     height: 200vh;
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
@@ -44,7 +51,7 @@ body::-webkit-scrollbar {
     box-sizing: border-box;
 }
 
-
+/* Container centralizando o logo */
 .container {
     display: flex;
     align-items: center;
@@ -53,11 +60,13 @@ body::-webkit-scrollbar {
     max-width: 1200px;
 }
 
+/* Logo responsivo */
 .logo {
     max-height: 30px;
     cursor: pointer;
 }
 
+/* Menu toggle (hambúrguer) */
 .menu-toggle {
     position: absolute;
     right: 210px;
@@ -65,6 +74,7 @@ body::-webkit-scrollbar {
     z-index: 1000;
 }
 
+/* Estilo das barras do menu hambúrguer */
 .menu-toggle .bar {
     display: block;
     width: 30px;
@@ -74,18 +84,19 @@ body::-webkit-scrollbar {
     transition: 0.3s;
 }
 
-
+/* Estilo da navegação (sidebar) */
 .nav {
     padding-top: 20px;
     position: fixed;
     top: 0;
-    right: -250px;
+    right: -250px; /* Mantém a sidebar fora da tela inicialmente */
     width: 250px;
     height: 100%;
     background: #fff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     transition: right 0.3s;
     z-index: 999;
+    overflow-y: auto; /* Permite rolagem vertical interna se necessário */
 }
 
 .nav ul {
@@ -101,22 +112,21 @@ body::-webkit-scrollbar {
 }
 
 li::marker {
-    color: var(--orange)
-  }
+    color: var(--orange);
+}
 
 .nav ul li a {
     text-decoration: none;
-    color: #000; /* Cor do texto */
-    font-size: 18px; /* Tamanho da fonte */
+    color: #000;
+    font-size: 18px;
 }
 
 .nav ul li a:hover {
     color: #000;
     opacity: 0.5;
-
 }
 
-/* Estilo do menu hambúrguer aberto */
+/* Menu hambúrguer aberto */
 .menu-toggle.open .bar:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 8.5px);
 }
@@ -131,8 +141,46 @@ li::marker {
 
 /* Sidebar visível */
 .nav.open {
-    right: 0;
+    right: 0; /* Move a sidebar para dentro da tela */
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        max-width: 100%;
+        justify-content: space-between;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .menu-toggle {
+        right: 20px;
+        top: 15px;
+    }
+
+    .container {
+        justify-content: flex-start;
+    }
+
+    .logo {
+        max-height: 20px;
+        margin: 0 auto;
+    }
+
+    .nav {
+        width: 100px;
+    }
+
+    .nav ul li {
+        margin: 30px 0;
+        width: 100%;
+    }
+
+    .nav ul li a {
+        font-size: 12px;
+    }
+}
+
 
 /* -------------- MAIN --------------- */
 
@@ -244,6 +292,61 @@ span {
 
 }
 
+@media (max-width: 768px) {
+    .main-ctn {
+        align-items: center;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .welcome-ctn {
+        max-width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .header-ctn-title {
+        font-size: 28px;
+        line-height: 48px;
+    }
+
+    .header-ctn-subtitle {
+        font-size: 16px;
+    }
+
+    .pr-list li {
+        font-size: 14px;
+    }
+
+    .main-img {
+        padding-top: 20px;
+    }
+
+    .main-img img {
+        width: 150px;
+        height: auto;
+        transform: none; /* Remover a rotação para melhor visualização em telas menores */
+    }
+
+    .btn {
+        width: 80%; /* Ajusta o tamanho do botão para telas menores */
+    }
+
+    .header-ctn-subtitle {
+        font-size: 13px !important;
+        text-align: left;
+    }
+
+    .pr-list li {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .grid-left {
+        display: none;
+    }
+}
+
 .benefits {
     display: flex;
     justify-content: center;
@@ -297,45 +400,11 @@ span {
     object-fit: cover;
 }
 
-/* .plans {
-    margin-top: 70px;
-    display: flex;
-    background: linear-gradient(180deg,#f0d9ff,#faf2ff);
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.levels {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #ffebf3;
-    border-radius: 8px;
-}
-
-.levels p {
-    text-align: center;
-}
-
-.bloco {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.bloco p {
-    font-size: 10px;
-} */
-
 strong {
     color: #3C3C3C;
 }
+
+
 
 .back-to-top {
     position: fixed;
@@ -362,6 +431,16 @@ strong {
 
 .fa-chevron-up {
     margin: 0; /* Remove a margem do ícone */
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 16px; /* Reduz o tamanho do ícone */
+    }
 }
 
 .carousel-container {
@@ -609,6 +688,64 @@ html {
     font-weight: bold;
     margin: 0 5px;
 }
+
+@media (max-width: 768px) {
+    .our-app {
+        display: none;
+    }
+
+    .grid {
+        max-width: 300px;
+        font-size: 12px;
+        margin: 0 auto;
+    }
+
+    .accordion-content {
+        font-size: 12px;
+        width: 200px;
+    }
+    .arrow {
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        font-size: 12px;
+        transition: all 0.3s ease-in;
+        color: var(--orange);
+    }
+
+    .footer {
+        justify-content: center;
+        display: block;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .benefits .card {
+        width: 180px;
+        height: 200px;
+        padding: 20px;
+
+    
+    }
+
+    .benefits .card img {
+        width: 180px;
+        height: 100px;
+    }
+
+    .benefits-title {
+        font-size: 18px;
+    }
+
+
+
+
+    
+}
+
+
 
 
 
