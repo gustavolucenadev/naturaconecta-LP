@@ -758,7 +758,7 @@ html {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        background-color: var(--orange);
+        background-color: aqua;
         color: #fff;
         border: none;
         width: 50px;
@@ -769,7 +769,7 @@ html {
         cursor: pointer;
         display: none; /* Esconde o botão inicialmente */
         z-index: 1000;
-        font-size: 20px; /* Tamanho do ícone */
+        font-size: 24px; /* Tamanho do ícone */
     }
     
     
