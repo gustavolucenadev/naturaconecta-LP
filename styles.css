@@ -425,9 +425,6 @@ strong {
     font-size: 20px; /* Tamanho do ícone */
 }
 
-.back-to-top:hover {
-    background-color: #555;
-}
 
 .fa-chevron-up {
     margin: 0; /* Remove a margem do ícone */
@@ -769,19 +766,15 @@ html {
         border-radius: 50%; /* Faz o botão ser redondo */
         display: flex;
         align-items: center;
-        justify-content: center;
         cursor: pointer;
         display: none; /* Esconde o botão inicialmente */
         z-index: 1000;
         font-size: 20px; /* Tamanho do ícone */
     }
     
-    .back-to-top:hover {
-        background-color: #555;
-    }
     
     .fa-chevron-up {
-        margin: 0; /* Remove a margem do ícone */
+        margin: 0 auto; /* Remove a margem do ícone */
     }
 }
 
