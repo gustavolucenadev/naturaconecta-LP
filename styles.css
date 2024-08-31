@@ -755,21 +755,7 @@ html {
     }
 
     .back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: aqua;
-        color: #fff;
-        border: none;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%; /* Faz o botão ser redondo */
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        display: none; /* Esconde o botão inicialmente */
-        z-index: 1000;
-        font-size: 24px; /* Tamanho do ícone */
+       display: none;
     }
 }
 
